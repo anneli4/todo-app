@@ -14,9 +14,8 @@ app.use(express.static(path.join(__dirname, "../frontend/build")));
 // API päringud
 let todos = [];
 
-app.get("/todos", (req, res) => {
-  res.json(todos);
-});
+app.get("/todos", (req, res) => res.json(todos));
+
 
 app.post("/todos", (req, res) => {
   const { text } = req.body;
